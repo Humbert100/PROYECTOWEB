@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="preload" href="{{ url_for('static',filename='styles/styles.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='scripts/procces_user_data.js') }}"></script>
+</head>
+<body>
+    <div class="backgroundregister">
+        <img src="{{ url_for('static',filename='resources/Logo.png') }}" alt="">
+        <h1>CYBERTEC</h1>
+        <main>
+            <div class="inicio">
+                <section>
+                    <form action="">
+
+                        <div class="title">
+                            <legend>Iniciar sesión</legend>
+                            <legend><span>Ir a CyberTec</span></legend>
+                        </div>
+        
+                            <div class="correo">
+                                <input type="email" placeholder="E-mail" id="user_email">  
+                            </div>
+        
+                            <div class="contrasenia">
+                                <input type="password" placeholder="Contraseña" id="user_pwd">
+                            </div>
+                            
+                            <div class="sesion">
+                                <input type="button" id="first" value="Inicio de sesión" onclick="process_login_info();">
+                                <input type="button" value="Regresar" onclick="location.href='/registro';">
+                            </div>
+                            
+                        
+                    </form>
+                </section>
+            </div>
+
+    
+        </main>
+    </div>
+
+</body>
+</html>
